@@ -10,9 +10,9 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.codepath.debuggingchallenges.R;
 import com.codepath.debuggingchallenges.models.Movie;
-import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
@@ -51,7 +51,7 @@ public class MoviesAdapter extends ArrayAdapter<Movie> {
         String ratingText = String.format(resources.getString(R.string.rating), movieRating);
         tvRating.setText(ratingText);
 
-        Picasso.with(getContext()).load(movie.getPosterUrl()).into(ivPoster);
+        Glide.with(getContext()).load(movie.getPosterUrl()).into(ivPoster);
 
         // Return the completed view to render on screen
         return convertView;
