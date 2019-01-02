@@ -2,7 +2,7 @@ package com.codepath.debuggingchallenges.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.widget.ListView;
+import android.support.v7.widget.RecyclerView;
 
 import com.codepath.debuggingchallenges.R;
 import com.codepath.debuggingchallenges.adapters.MoviesAdapter;
@@ -22,7 +22,7 @@ public class MoviesActivity extends AppCompatActivity {
 
     private static final String API_KEY = "a07e22bc18f5cb106bfe4cc1f83ad8ed";
 
-    ListView lvMovies;
+    RecyclerView rvMovies;
     MoviesAdapter adapter;
     ArrayList<Movie> movies;
 
@@ -30,13 +30,13 @@ public class MoviesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_movies);
-        lvMovies = (ListView) findViewById(R.id.lvMovies);
+        rvMovies = findViewById(R.id.rvMovies);
 
         // Create the adapter to convert the array to views
-        MoviesAdapter adapter = new MoviesAdapter(this, movies);
+        MoviesAdapter adapter = new MoviesAdapter(movies);
 
         // Attach the adapter to a ListView
-        lvMovies.setAdapter(adapter);
+        rvMovies.setAdapter(adapter);
 
         fetchMovies();
     }
