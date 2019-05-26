@@ -23,7 +23,6 @@
         <activity
             android:name=".activities.ToolbarActivity"
             android:theme="@style/AppThemeNoActionBar" />
-        <activity android:name=".activities.SearchHistoryActivity"></activity>
     </application>
 
 </manifest>
