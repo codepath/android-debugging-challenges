@@ -10,19 +10,17 @@
     tools:context="com.codepath.debuggingchallenges.activities.ChangeBackgroundActivity">
 
     <Button
+        android:id="@+id/btnGo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/go"
-        android:id="@+id/btnGo"
-        android:onClick="onGoClickz"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerInParent="true"
+        android:onClick="onGoClick"
+        android:text="@string/go" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:elevation="2dp"
-        android:clickable="true"
-        android:background="@android:color/transparent"/>
+        android:background="@android:color/transparent"
+        android:elevation="2dp" />
 
 </RelativeLayout>

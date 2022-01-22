@@ -10,23 +10,22 @@
     tools:context=".activities.CurrentDayActivity">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerInParent="true"
         android:text="Current Day of Month:"
-        android:id="@+id/textView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="26sp" />
 
     <TextView
+        android:id="@+id/tvDay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:id="@+id/tvDay"
         android:layout_below="@+id/textView"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
         android:text="22"
+        android:textAppearance="?android:attr/textAppearanceLarge"
         android:textSize="26sp" />
 </RelativeLayout>

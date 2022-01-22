@@ -21,7 +21,10 @@ class MoviesAdapter(private val movies: List<Movie>?) : RecyclerView.Adapter<Mov
     }
 
     override fun getItemCount(): Int {
-        return 0
+        if (movies == null) {
+            return 0
+        }
+        return movies.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -38,7 +41,6 @@ class MoviesAdapter(private val movies: List<Movie>?) : RecyclerView.Adapter<Mov
     override fun onBindViewHolder(viewHolder: ViewHolder, position: Int) {
         if (movies != null) {
             val movie = movies[position]
-
 
             // Populate the data into the template view using the data object
             viewHolder.tvName.text = movie.title

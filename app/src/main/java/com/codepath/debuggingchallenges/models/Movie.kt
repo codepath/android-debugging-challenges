@@ -6,7 +6,7 @@ import org.json.JSONException
 import java.util.ArrayList
 
 class Movie(jsonObject: JSONObject) {
-    val title: String = jsonObject.getString("original-title")
+    val title: String = jsonObject.getString("original_title")
     val posterUrl: String = String.format("https://image.tmdb.org/t/p/w342/%s", jsonObject.getString("poster_path"))
     val rating: Double = jsonObject.getDouble("vote_average")
 

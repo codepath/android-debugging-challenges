@@ -7,13 +7,13 @@
     tools:context="com.codepath.debuggingchallenges.activities.ToolbarActivity">
 
     <TextView
+        android:id="@+id/tvDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:textSize="50sp"
+        android:layout_centerHorizontal="true"
         android:text="@string/this_is_a_sample_of_really_large_text"
-        android:id="@+id/tvDescription"
-        android:layout_centerHorizontal="true" />
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="50sp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
