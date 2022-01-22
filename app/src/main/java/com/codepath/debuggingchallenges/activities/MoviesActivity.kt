@@ -18,14 +18,14 @@ private const val TAG = "MoviesActivity"
 class MoviesActivity : AppCompatActivity() {
     private var rvMovies: RecyclerView? = null
     var adapter: MoviesAdapter? = null
-    //var movies: List<Movie>? = null
     private val movies = mutableListOf<Movie>()
+    //var movies: List<Movie>? = null
+    //private lateinit var rvMovies: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_movies)
         rvMovies = findViewById(R.id.rvMovies)
-
         // Create the adapter to convert the array to views
         adapter = MoviesAdapter(movies)
 

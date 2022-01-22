@@ -49,6 +49,10 @@ class MoviesAdapter(private val movies: List<Movie>?) : RecyclerView.Adapter<Mov
             if (movieRating > 6) {
                 viewHolder.view.setBackgroundColor(Color.GREEN)
             }
+            else
+            {
+                viewHolder.view.setBackgroundColor(Color.WHITE)
+            }
             val ratingText = String.format(resources.getString(R.string.rating), movieRating)
             viewHolder.tvRating.text = ratingText
             Glide.with(viewHolder.ivPoster.context).load(movie.posterUrl).into(
